@@ -1,0 +1,49 @@
+| Corral : correlated attribute.  By Ronny Kohavi
+| First used in John, Kohavi, and Pfleger, 
+|    Irrelevant features and the subset selection
+|    problem. In Machine Learning: Proceedings of the Eleventh International
+|    Conference, 1994, available in http://robotics.stanford.edu/~ronnyk
+|
+| Basic idea: This is an artificial domain where the target concept is 
+|     (A0^A1) V (B0^B1)
+| Irr is irrelevant, and Correlated is an attribute highly correlated with 
+|   the label, but with 25% error rate.  The training set was selected
+|   manually to make it hard for decision trees to deal with this problem.
+| All decision tree algorithms I tested (ID3, Cart, C4.5) pick the
+|   "Correlated" attribute as the root split.  This is the worst decision
+|   possible because the data splits into two and to get 100%, the problem
+|   must be solved again for each subtree.
+| Feature subset selection solves the problem because it hides this attribute
+|   from the decison tree algorithm.
+| C4.5AP (automatic parameter selection for C4.5 provided by MLC++) 
+|   discovered a set of parameters for C4.5 (-m1 -c80) which causes
+|   C4.5 to prune up, replacing the root node with its left subtree which
+|   is correct, thus getting 100% accuracy.  Note however that this
+|   is a postprocessing step, and the original tree still contains the
+|   correlated attribute at the root.
+| 
+| The idea for the test set is to have 25% noise in the last bit (correlated).
+| Hence each instance for A, B, C, D, IRR repeats 4 times
+| (hence 32*4) and one of them has the Corr bit wrong.
+| For example, let's look at 0,0,0,0 for A,B,C,D
+| 
+| 0, 0, 0, 0, 0, 0, 0.
+| 0, 0, 0, 0, 0, 0, 0.
+| 0, 0, 0, 0, 0, 0, 0.
+| 0, 0, 0, 0, 0, 1, 0.
+| 
+| 0, 0, 0, 0, 1, 0, 0.
+| 0, 0, 0, 0, 1, 0, 0.
+| 0, 0, 0, 0, 1, 0, 0.
+| 0, 0, 0, 0, 1, 1, 0.
+
+
+
+1,0
+
+A0: 0,1
+A1: 0,1
+B0: 0,1
+B1: 0,1
+Irrelevant: 0,1
+Correlated:0,1
