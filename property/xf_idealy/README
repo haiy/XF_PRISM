@@ -1,0 +1,23 @@
+
+How to use "main"
+
+RunCommand:  ./main source_file < mic_conf_file
+
+Note:
+The "source_file" is the original file maybe 
+with csv suffix.While the "mic_conf_file" has
+two parts,the first N lines are the MIC matrix
+and the second part is the parameters for all
+search algorithm.
+
+A sample mic_conf_file file:
+
+0
+0.1324 0.342
+0.234  0.242 0.34
+0.1345 0.95  0.765 0.53
+200 600 0.6 0.1  (for GA,sizeof the population,generations,crossover rate,mututation  rate)
+5  (for SFFS, the target number of features)
+0.0 (fot FCBF,the threshold)
+
+
