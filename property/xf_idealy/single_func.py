@@ -23,6 +23,7 @@ def norm_fun(x,mu=0,siga=1):
     b=-(x-mu)**2/(2*siga**2)
     return a*np.exp(b)
 
+func_list=[linear_fun,non_linear,fourior_fun,sin_fun,cube_fun,norm_fun]
 
 """
     init_x will firstly invoke the "func" function to generate
@@ -52,15 +53,35 @@ def funcs_mic(lx,func_list):
         new.append(float(init_x(func,lx)))
     return new
 
-
-func_list=[linear_fun,non_linear,fourior_fun,sin_fun,cube_fun,norm_fun]
+"""
+    This function will generate a matrix,in which each
+    coloumn is a random number that denotes the x value
+    of the function,the final 5 columns are filled with
+    random numbers except the last one.The last column
+    is the sum of the f(x) values of the functions.
+"""
+def func_value(rand_func,file_name):
+    class_value=[]
+    f=open(file_name,'w')
+    for x in range(0,500):
+        new=[]
+        rand_fill=[rand_func(0,100)]*5
+        val_sum=0
+        for func in func_list:
+            rand_x=rand_func(0,100)
+            val_sum=val_sum+func(rand_x)
+            new.append(rand_x)
+        new=new+rand_fill
+        new.append(val_sum)
+        f.write(",".join([str(x) for x in new])+'\n')
+    f.close()
 
 """
     The main function will calculate the average and standard
     devitation of mic for each function.Every column represents
     the correspond mic values.
 """
-if __name__=="__main__":
+def equility():
     sum_mic_int=[]
     sum_mic_float=[]
     """
@@ -84,4 +105,7 @@ if __name__=="__main__":
     float_stdv=np.std(sum_mic_float,axis=0)
     print "X_FLT\n",float_mean,"\n",float_stdv
 
+if __name__=='__main__':
+    print "Test!"
+    func_value(random.randint,"INT")
 

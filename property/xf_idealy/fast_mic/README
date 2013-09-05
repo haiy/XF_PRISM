@@ -1,0 +1,24 @@
+作者：haiy
+日期：Wed Apr 24 18:36:29 CST 2013
+
+执行环境：
+bash执行方式为  bash
+python 是python 2.7
+
+功能：
+快速计算大文件的所有mic值，能够设置文件的分割执行份数。
+
+文件要求：当前目录应该有下面文件。
+1.fast_mic.sh  为终端执行文件，其会调用mic_set和split_result.py
+2.mic_set  为mic分段计算程序
+3.split_result.py 根据总需要计算的mic个数值将任务分成几乎均等的份数
+4.输入文件为一个csv格式的文件，满足mic_format.
+
+如何执行：
+bash fast_mic.sh corral.csv 3 0.6 15
+参数说明，corral.csv为数据文件，3为任务的分割份数，0.6和15为mic参数
+
+测试文件说明：
+直接将csv文件copy至当前目录，执行fast_mic.sh,会生成类似corral.csv_mic
+的目录。corral.mic是最后所有的结果。
+

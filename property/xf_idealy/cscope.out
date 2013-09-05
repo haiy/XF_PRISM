@@ -1,0 +1,844 @@
+cscope 15 $HOME/Documents/Github/XF_PRISM/property/xf_idealy -q 0000000128 0000003287
+	@single_func.py
+
+1 #!/
+u¤
+/
+bš
+/
+pythÚ
+
+
+2 #Wed 
+S•
+ 4 00:58:46 
+CST
+ 2013
+
+3 #AuthÙ:
+haiy
+
+
+5 
+impÜt
+ 
+m©h
+
+
+6 
+impÜt
+ 
+¿ndom
+
+
+7 
+impÜt
+ 
+sub´oûss
+
+
+8 
+impÜt
+ 
+numpy
+ 
+as
+ 
+Å
+
+
+11 
+def
+ 
+	$lš—r_fun
+(
+x
+):
+
+12  
+x
+
+
+13 
+def
+ 
+	$sš_fun
+(
+x
+):
+
+14  
+m©h
+.
+	$sš
+(
+x
+)
+
+15 
+def
+ 
+	$cube_fun
+(
+x
+):
+
+16  
+m©h
+.
+	$pow
+(
+x
+,3)
+
+17 
+def
+ 
+	$nÚ_lš—r
+(
+x
+):
+
+18  
+x
+*
+m©h
+.
+	$sš
+(
+x
+)
+
+19 
+def
+ 
+	$fouriÜ_fun
+(
+x
+):
+
+20  
+m©h
+.
+	`sš
+(16*m©h.
+pi
+*
+x
+)+x
+
+21 
+def
+ 
+	$nÜm_fun
+(
+x
+,
+mu
+=0,
+siga
+=1):
+
+22 
+a
+=1/(
+siga
+*
+Å
+.
+	$sq¹
+(2*
+Å
+.
+pi
+))
+
+23 
+b
+=-(
+x
+-
+mu
+)**2/(2*
+siga
+**2)
+
+24  
+a
+*
+Å
+.
+	$exp
+(
+b
+)
+
+26 
+func_li¡
+=[
+lš—r_fun
+,
+nÚ_lš—r
+,
+fouriÜ_fun
+,
+sš_fun
+,
+cube_fun
+,
+nÜm_fun
+]
+
+29 
+š™_x
+ 
+wl
+ 
+fœ¡ly
+ 
+švoke
+ 
+the
+ "func" 
+funùiÚ
+ 
+to
+ 
+g’”©e
+
+
+30 
+the
+ 
+»Ëvªt
+ 
+	$f
+(
+lx
+è
+li¡
+,
+ªd
+ 
+the
+ 
+u£
+ 
+mic_£t
+ 
+to
+ 
+ÿlcuÏ‹
+
+
+31 
+the
+ 
+MIC
+ 
+of
+h
+·œ
+
+
+33 
+def
+ 
+	$š™_x
+(
+func
+,
+lx
+):
+
+34 
+yx
+=[]
+
+35 
+yx
+=[
+	$func
+(
+x
+èx 
+š
+ 
+lx
+]
+
+36 
+·œs
+=
+	$z
+(
+lx
+,
+yx
+)
+
+37 
+å
+=
+	`İ’
+("tmp.txt",'w')
+
+38 
+x
+ 
+š
+ 
+·œs
+:
+
+39 
+å
+.
+	`wr™e
+(
+	`¡r
+(
+x
+[0])+str(',')+str(x[1])+str('\n'))
+
+40 
+å
+.
+	$şo£
+()
+
+41 
+mic
+=
+sub´oûss
+.
+	`check_ouut
+(['./mic_set','tmp.txt','0','1','0.7','15'])
+
+42 
+sub´oûss
+.
+	`check_ouut
+(['rm','tmp.txt'])
+
+43 
+mic
+=mic.
+	`¡r
+("\n")
+
+44  
+mic
+
+
+47 
+U£
+ 
+v¬ious
+ 
+funùiÚ
+ 
+to
+ 
+g’”©e
+ 
+the
+ 
+	$f
+(
+lx
+è
+·œs
+ ,
+ªd
+ 
+¡Üe
+
+
+48 
+the
+ 
+MIC
+ 
+of
+ 
+—ch
+ 
+·œ
+ 
+to
+ 
+li¡
+ "new".
+
+50 
+def
+ 
+	$funcs_mic
+(
+lx
+,
+func_li¡
+):
+
+51 
+Ãw
+=[]
+
+52 
+func
+ 
+š
+ 
+func_li¡
+:
+
+53 
+Ãw
+.
+	`­³nd
+((
+	$š™_x
+(
+func
+,
+lx
+)))
+
+54  
+Ãw
+
+
+57 
+This
+ 
+funùiÚ
+ 
+wl
+ 
+g’”©e
+ 
+a
+ 
+m©rix
+,
+š
+ 
+which
+ 
+—ch
+
+
+58 
+cŞoumn
+ 
+is
+ 
+a
+ 
+¿ndom
+ 
+numb”
+ 
+th©
+ 
+d’Ùes
+ 
+the
+ 
+x
+ 
+v®ue
+
+
+59 
+of
+ 
+the
+ 
+funùiÚ
+,th
+fš®
+ 5 
+cŞumns
+ 
+¬e
+ 
+fËd
+ 
+w™h
+
+
+60 
+¿ndom
+ 
+numb”s
+ 
+exû±
+ 
+the
+ 
+Ï¡
+ 
+Úe
+.
+The
+†a¡ 
+cŞumn
+
+
+61 
+is
+ 
+the
+ 
+sum
+ 
+of
+h
+	$f
+(
+x
+è
+v®ues
+ 
+of
+ 
+the
+ 
+funùiÚs
+.
+
+63 
+def
+ 
+	$func_v®ue
+(
+¿nd_func
+):
+
+64 
+şass_v®ue
+=[]
+
+65 
+x
+ 
+š
+ 
+	$¿nge
+(0,500):
+
+66 
+Ãw
+=[]
+
+67 
+¿nd_fl
+=[
+	`¿nd_func
+(0,100)]*5
+
+68 
+v®_sum
+=0
+
+69 
+func
+ 
+š
+ 
+func_li¡
+:
+
+70 
+¿nd_x
+=
+	$¿nd_func
+(0,100)
+
+71 
+v®_sum
+=v®_sum+
+	$func
+(
+x
+)
+
+72 
+Ãw
+.
+	$­³nd
+(
+¿nd_x
+)
+
+73 
+Ãw
+òew+
+¿nd_fl
+
+
+74 
+Ãw
+.
+	$­³nd
+(
+v®_sum
+)
+
+75 
+şass_v®ue
+.
+	$­³nd
+(
+Ãw
+)
+
+76  
+şass_v®ue
+
+
+79 
+The
+ 
+maš
+ 
+funùiÚ
+ 
+wl
+ 
+ÿlcuÏ‹
+ 
+the
+ 
+av”age
+ 
+ªd
+ 
+¡ªd¬d
+
+
+80 
+dev™©iÚ
+ 
+of
+ 
+mic
+ 
+—ch
+ 
+funùiÚ
+.
+Ev”y
+ 
+cŞumn
+ 
+»´e£Ás
+
+
+81 
+the
+ 
+cÜ»¥Úd
+ 
+mic
+ 
+v®ues
+.
+
+83 
+def
+ 
+	$equ™y
+():
+
+84 
+sum_mic_št
+=[]
+
+85 
+sum_mic_æßt
+=[]
+
+87 
+SimuÏ‹
+ 
+—ch
+ 
+funùiÚ
+ 
+N
+ 
+times
+
+
+89 
+N
+=10
+
+90 
+x
+ 
+š
+ 
+	$¿nge
+(0,
+N
+):
+
+91 
+lx_št
+=[
+¿ndom
+.
+	$¿ndšt
+(0,100è
+x
+ 
+š
+ 
+	`¿nge
+(0,500)]
+
+92 
+lx_æßt
+=[
+¿ndom
+.
+	$unifÜm
+(0,100è
+x
+ 
+š
+ 
+	`¿nge
+(0,500)]
+
+93 
+sum_mic_št
+.
+	`­³nd
+(
+	$funcs_mic
+(
+lx_št
+,
+func_li¡
+))
+
+94 
+sum_mic_æßt
+.
+	`­³nd
+(
+	$funcs_mic
+(
+lx_æßt
+,
+func_li¡
+))
+
+95 
+mic_št
+=
+Å
+.
+	$¬¿y
+(
+sum_mic_št
+)
+
+96 
+´št
+ "INT\n",
+mic_št
+
+
+97 
+mic_æßt
+=
+Å
+.
+	$¬¿y
+(
+sum_mic_æßt
+)
+
+98 
+št_m—n
+=
+Å
+.
+	$m—n
+(
+mic_št
+,
+axis
+=0)
+
+99 
+št_¡dv
+=
+Å
+.
+	$¡d
+(
+sum_mic_št
+,
+axis
+=0)
+
+100 
+´št
+ "X_INT\n",
+št_m—n
+,"\n",
+št_¡dv
+
+
+102 
+´št
+ "FLT\n",
+mic_æßt
+
+
+103 
+æßt_m—n
+=
+Å
+.
+	$m—n
+(
+mic_æßt
+,
+axis
+=0)
+
+104 
+æßt_¡dv
+=
+Å
+.
+	$¡d
+(
+sum_mic_æßt
+,
+axis
+=0)
+
+105 
+´št
+ "X_FLT\n",
+æßt_m—n
+,"\n",
+æßt_¡dv
+
+
+	@
+1
+.
+0
+1
+15
+single_func.py

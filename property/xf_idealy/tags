@@ -1,0 +1,21 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+cube_fun	single_func.py	/^def cube_fun(x):$/;"	f
+equility	single_func.py	/^def equility():$/;"	f
+fourior_fun	single_func.py	/^def fourior_fun(x):$/;"	f
+func_list	single_func.py	/^func_list=[linear_fun,non_linear,fourior_fun,sin_fun,cube_fun,norm_fun]$/;"	v
+func_value	single_func.py	/^def func_value(rand_func):$/;"	f
+funcs_mic	single_func.py	/^def funcs_mic(lx,func_list):$/;"	f
+init_x	single_func.py	/^def init_x(func,lx):$/;"	f
+linear_fun	single_func.py	/^def linear_fun(x):$/;"	f
+math	single_func.py	/^import math$/;"	i
+non_linear	single_func.py	/^def non_linear(x):$/;"	f
+norm_fun	single_func.py	/^def norm_fun(x,mu=0,siga=1):$/;"	f
+np	single_func.py	/^import numpy as np$/;"	i
+random	single_func.py	/^import random$/;"	i
+sin_fun	single_func.py	/^def sin_fun(x):$/;"	f
+subprocess	single_func.py	/^import subprocess$/;"	i
