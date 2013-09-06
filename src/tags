@@ -1,0 +1,224 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+CFLAGS	makefile	/^CFLAGS=-g -lm -Wall$/;"	m
+CHECK_DATA	mic.h	19;"	d
+CY	ga.c	/^int CY(population pop)$/;"	f
+Chrosome	ga.h	/^typedef struct Chrosome$/;"	s
+DataSet	mic.h	/^typedef struct DataSet$/;"	s
+Debug	mic.h	13;"	d
+Debug	mic.h	29;"	d
+Debug	mic.h	30;"	d
+EXACT	mic.h	21;"	d
+FeatureList	sffs.h	/^typedef struct FeatureList$/;"	s
+FeatureNode	sffs.h	/^typedef struct FeatureNode$/;"	s
+FeatureType	main.h	/^typedef struct FeatureType$/;"	s
+FileContent	read_content.h	/^typedef struct FileContent$/;"	s
+GA_HEADER	ga.h	2;"	d
+LEVEL_1	mic.h	14;"	d
+LEVEL_2	mic.h	15;"	d
+LEVEL_3	mic.h	16;"	d
+LOWEST	mic.h	18;"	d
+Label	mic.h	/^typedef struct Label$/;"	s
+List	fcbf.h	/^typedef struct List$/;"	s
+List	micfs.h	/^typedef struct List$/;"	s
+ListNode	fcbf.h	/^typedef struct ListNode$/;"	s
+ListNode	micfs.h	/^typedef struct ListNode$/;"	s
+MICFS_HEADER	fcbf.h	2;"	d
+MICFS_HEADER	micfs.h	2;"	d
+MIC_H	mic.h	2;"	d
+MIC_MATRIX	mic_matrix.h	2;"	d
+MT	ga.c	/^int MT(population pop)$/;"	f
+MicMatrix	mic_matrix.h	/^typedef struct MicMatrix$/;"	s
+Optx	mic.c	/^void Optx(int x,int y, int clmn, int **rs, float **MI)$/;"	f
+PATA_H	para_chk.h	3;"	d
+PI	mic.h	17;"	d
+Point	mic.h	/^typedef struct Point$/;"	s
+Points	mic.h	/^}Points;$/;"	t	typeref:struct:DataSet
+Population	ga.h	/^typedef struct Population$/;"	s
+READ_ALL_CONTENT	read_content.h	2;"	d
+RED_0	sffs.h	12;"	d
+RED_1	sffs.h	11;"	d
+ResultFeatures	main.h	/^typedef struct ResultFeatures$/;"	s
+SFFS_H	sffs.h	2;"	d
+acu	ga.h	/^    float *acu;$/;"	m	struct:Population
+add_l	fcbf.c	/^void add_l(list * lst)$/;"	f
+add_l	micfs.c	/^void add_l(list * lst)$/;"	f
+add_node	sffs.c	/^fl_tp add_node(int atr,fl_tp Xk,mic_matrix M)$/;"	f
+add_node	sffs_older.c	/^fl_tp add_node(int atr,fl_tp Xk,fl_tp Ym,mic_matrix M)$/;"	f
+atr	main.h	/^    int atr;$/;"	m	struct:FeatureType
+atr	sffs.h	/^    int atr;$/;"	m	struct:FeatureNode
+atrn	mic_matrix.h	/^    int atrn;$/;"	m	struct:MicMatrix
+atrn	read_content.h	/^    int atrn;$/;"	m	struct:FileContent
+atrs	main.h	/^    featyp *atrs;$/;"	m	struct:ResultFeatures
+brk_bst	main.c	/^void brk_bst(rfl_ptr * bst)$/;"	f
+brk_fltp	sffs.c	/^void brk_fltp(fl_tp Xk)$/;"	f
+brk_fltp	sffs_older.c	/^void brk_fltp(fl_tp Xk)$/;"	f
+brk_l	fcbf.c	/^void brk_l(list *lst)$/;"	f
+brk_l	micfs.c	/^void brk_l(list *lst)$/;"	f
+brk_pop	ga.c	/^void brk_pop(population *pop)$/;"	f
+bufsize	mic.h	20;"	d
+cal_MI	mic.c	/^void cal_MI(Points *D,data_type * Dx,data_type * Dy,int x ,int y, int f,float **MI)$/;"	f
+cal_acu	ga.c	/^void cal_acu(population *pop)$/;"	f
+cal_merit	mic_matrix.c	/^float cal_merit(int *lst,int l,mic_matrix M)$/;"	f
+cal_mic	mic.c	/^float cal_mic(Points *D,float alpha,int f)$/;"	f
+cal_mic_1all	mic.c	/^void cal_mic_1all(char *filename,int a,float alpha,int f)$/;"	f
+cal_mic_ctmem	read_content.c	/^void cal_mic_ctmem(int argc,char *argv[])$/;"	f
+cal_mic_inter	mic.c	/^float cal_mic_inter(char *filename,Points *D,int xa,int yb,float alpha,int f)$/;"	f
+cal_mic_matrix	mic_matrix.c	/^float ** cal_mic_matrix(char *fnm,float alpha,float f)$/;"	f
+check_arry	mic_matrix.c	/^void check_arry(int * l,int a)$/;"	f
+check_feature_list	sffs.c	/^void check_feature_list(fl_tp list)$/;"	f
+check_feature_list	sffs_older.c	/^void check_feature_list(fl_tp list)$/;"	f
+check_feature_list	sffs_test.c	/^void check_feature_list(fl_tp list)$/;"	f
+check_mic_matrix	mic_matrix.c	/^void check_mic_matrix(mic_matrix M)$/;"	f
+check_pop	ga_test.c	/^void check_pop(population pop)$/;"	f
+chg_chro	ga.c	/^void chg_chro(population *pop,int a,int b)$/;"	f
+chg_chro_PS	ga.c	/^void chg_chro_PS(population *pop,int a,population *S,int b)$/;"	f
+chk_bst	main.c	/^void chk_bst(resfts bst)$/;"	f
+chk_l	fcbf.c	/^void chk_l(list *lst)$/;"	f
+chk_sm	mic.c	/^int chk_sm(Points * D)$/;"	f
+chro	ga.h	/^    int *chro;$/;"	m	struct:Chrosome
+chro_ptr	ga.h	/^}chrosome,*chro_ptr;$/;"	t	typeref:struct:Chrosome
+chrosome	ga.h	/^}chrosome,*chro_ptr;$/;"	t	typeref:struct:Chrosome
+ck_e	para_chk.c	/^int ck_e(float e)$/;"	f
+ck_f	para_chk.c	/^int ck_f(char *filename)$/;"	f
+ck_i	para_chk.c	/^int ck_i(int xa,int yb,int atrn)$/;"	f
+ck_m	para_chk.c	/^int ck_m(char *mode)$/;"	f
+ck_mic	para_chk.c	/^int ck_mic(int argc,char *argv[], int atrn)$/;"	f
+ck_micfs	para_chk.c	/^int ck_micfs(int argc,char *argv[])$/;"	f
+ck_n	para_chk.c	/^int ck_n(int argc,int der)$/;"	f
+ckpa	mic.c	/^int ckpa(int argc,char *argv[],int atrn)$/;"	f
+class_idx	mic_matrix.h	/^    int class_idx;$/;"	m	struct:MicMatrix
+cn	mic.h	/^	int cn;$/;"	m	struct:Label
+count_atr	mic.c	/^int count_atr(char *filename)$/;"	f
+count_inst	mic.c	/^int count_inst(char * filename)$/;"	f
+cpy_chro	ga.c	/^void cpy_chro(chro_ptr src,chro_ptr dst)$/;"	f
+cross_over	ga.c	/^void cross_over(chro_ptr father,chro_ptr mother)$/;"	f
+ct	read_content.h	/^    float **ct;$/;"	m	struct:FileContent
+data_type	mic.h	/^}data_type;$/;"	t	typeref:struct:Point
+debug_addnode	sffs_older.c	222;"	d	file:
+debug_total	sffs_older.c	39;"	d	file:
+del_l_idx	micfs.c	/^void del_l_idx(list *lst,int idx)$/;"	f
+del_l_ptr	fcbf.c	/^void del_l_ptr(list *lst,list_node *tp)$/;"	f
+del_l_ptr	micfs.c	/^void del_l_ptr(list *lst,list_node *tp)$/;"	f
+del_lsi	sffs.c	/^fl_tp del_lsi(int lsi,fl_tp Xk_plus,mic_matrix M)$/;"	f
+del_lsi	sffs_older.c	/^fl_tp del_lsi(int lsi,fl_tp Xk_plus,mic_matrix M)$/;"	f
+del_node	sffs.c	/^fl_tp del_node(int atr,fl_tp Ym,mic_matrix M)$/;"	f
+elitist_sel	ga.c	/^population *elitist_sel(population *pop,population *S)$/;"	f
+eqpX	mic.c	/^int eqpX (Points *D,data_type * Dx, data_type *Dy, int l, int x, int y, int f)$/;"	f
+eqpY	mic.c	/^void eqpY (Points *D, data_type * Dy ,int l, int y )$/;"	f
+fcfs	fcbf.c	/^list * fcfs(mic_matrix M,float sa)$/;"	f
+fcfs_rf	main.c	/^rfl_ptr fcfs_rf(mic_matrix M, float sa)$/;"	f
+fct	read_content.h	/^}fct;$/;"	t	typeref:struct:FileContent
+feature_list	sffs.h	/^}feature_list,*fl_tp;$/;"	t	typeref:struct:FeatureList
+feature_node	sffs.h	/^}feature_node,*fet_tp;$/;"	t	typeref:struct:FeatureNode
+featyp	main.h	/^}featyp,*ftp_ptr;$/;"	t	typeref:struct:FeatureType
+fet_tp	sffs.h	/^}feature_node,*fet_tp;$/;"	t	typeref:struct:FeatureNode
+fill_mic_matrix	mic_matrix.c	/^void fill_mic_matrix(char *fnm,mic_matrix *M,float exp,float f)$/;"	f
+fl_tp	sffs.h	/^}feature_list,*fl_tp;$/;"	t	typeref:struct:FeatureList
+fn	read_content.h	/^    char *fn;$/;"	m	struct:FileContent
+ftp_ptr	main.h	/^}featyp,*ftp_ptr;$/;"	t	typeref:struct:FeatureType
+fu	mic.c	/^void fu (int len ,data_type *SRC_DA,data_type *DES_DB )$/;"	f
+ga	ga.c	/^chro_ptr ga(mic_matrix M,int psz,int n,float pc,float pm)$/;"	f
+gafs	main.c	/^rfl_ptr gafs(mic_matrix M,int psz,int n,float pc,float pm)$/;"	f
+gd	mic.c	/^void gd (Points * D )$/;"	f
+gdrs	mic.c	/^void gdrs(Points *D ,int ** rs ) $/;"	f
+gentype	ga.c	/^int gentype(int *bincode,int ** gtp,int ln)$/;"	f
+glsi	sffs.c	/^int glsi(fl_tp Xk_plus,mic_matrix M)$/;"	f
+glsi	sffs_older.c	/^int glsi(fl_tp Xk_plus,mic_matrix M)$/;"	f
+gmsw	sffs.c	/^int gmsw(fl_tp Xk,fl_tp Ym,mic_matrix M)$/;"	f
+gmsw	sffs_older.c	/^int gmsw(fl_tp Xk,fl_tp Ym,mic_matrix M)$/;"	f
+grid	mic.h	/^	label_type * grid;$/;"	m	struct:DataSet
+header	fcbf.h	/^    list_node * header;$/;"	m	struct:List
+header	micfs.h	/^    list_node * header;$/;"	m	struct:List
+header	sffs.h	/^    fet_tp header;$/;"	m	struct:FeatureList
+hst	mic.c	/^void hst(int clmn,int y,int **rs,float **Hpq,float **Hst,float **Ai,float *Hq)$/;"	f
+idx	fcbf.h	/^    int idx;$/;"	m	struct:ListNode
+idx	micfs.h	/^    int idx;$/;"	m	struct:ListNode
+in_mic	fcbf.c	/^void in_mic(list *lst,data_type m)$/;"	f
+in_mic	micfs.c	/^void in_mic(list *lst,data_type m)$/;"	f
+ini_Xk	sffs.c	/^fl_tp ini_Xk()$/;"	f
+ini_Ym	sffs.c	/^fl_tp ini_Ym(mic_matrix M)$/;"	f
+ini_pop	ga.c	/^void ini_pop(mic_matrix M,population *pop)$/;"	f
+ini_tmpop	ga.c	/^population *ini_tmpop(population pop)$/;"	f
+inst	read_content.h	/^    int inst;$/;"	m	struct:FileContent
+k	sffs.h	/^    int k;$/;"	m	struct:FeatureList
+l	ga.h	/^    int l;$/;"	m	struct:Chrosome
+label_type	mic.h	/^}label_type;$/;"	t	typeref:struct:Label
+len	fcbf.h	/^    int len;$/;"	m	struct:List
+len	mic.h	/^	int len;$/;"	m	struct:DataSet
+len	micfs.h	/^    int len;$/;"	m	struct:List
+list	fcbf.h	/^}list;$/;"	t	typeref:struct:List
+list	micfs.h	/^}list;$/;"	t	typeref:struct:List
+list_node	fcbf.h	/^}list_node;$/;"	t	typeref:struct:ListNode
+list_node	micfs.h	/^}list_node;$/;"	t	typeref:struct:ListNode
+lst_rplc	sffs.c	/^fl_tp lst_rplc(fl_tp *original,fl_tp *target)$/;"	f
+lst_rplc	sffs_older.c	/^fl_tp lst_rplc(fl_tp original,fl_tp target)$/;"	f
+m	ga.h	/^    chro_ptr m;$/;"	m	struct:Population
+main	main.c	/^int main(int argc,char *argv[])$/;"	f
+membs	sffs.h	/^    int * membs;$/;"	m	struct:FeatureList
+mic	fcbf.h	/^    float mic;$/;"	m	struct:ListNode
+mic	main.h	/^    float mic;$/;"	m	struct:FeatureType
+mic	mic_matrix.h	/^    float **mic;$/;"	m	struct:MicMatrix
+mic	micfs.h	/^    float mic;$/;"	m	struct:ListNode
+mic_ct_mem	read_content.c	/^float mic_ct_mem(fct file_content,Points *D,int a ,int b,float alpha,int f)$/;"	f
+mic_matrix	mic_matrix.h	/^}mic_matrix;$/;"	t	typeref:struct:MicMatrix
+micfs	micfs.c	/^list * micfs(char *filename,Points * D,float alpha,int f)$/;"	f
+micfs_main	micfs.c	/^int micfs_main(int argc,char *argv[])$/;"	f
+mutation	ga.c	/^void mutation(chro_ptr chros)$/;"	f
+n	ga.h	/^    int n;$/;"	m	struct:Population
+nn	fcbf.h	/^    struct ListNode *nn;$/;"	m	struct:ListNode	typeref:struct:ListNode::ListNode
+nn	micfs.h	/^    struct ListNode *nn;$/;"	m	struct:ListNode	typeref:struct:ListNode::ListNode
+nn	sffs.h	/^    struct FeatureNode *nn;$/;"	m	struct:FeatureNode	typeref:struct:FeatureNode::FeatureNode
+numb	main.h	/^    int numb;$/;"	m	struct:ResultFeatures
+opa	mic.c	/^float opa (int argc,char *argv[] )$/;"	f
+p_qs	mic.c	/^int p_qs (data_type *sd,int left,int right)$/;"	f
+para_chk	para_chk.c	/^int para_chk(int argc,char *argv[],int atrn)$/;"	f
+partp	ga.c	/^int partp(int a,int b,population *pop)$/;"	f
+pc	ga.h	/^    float pc;$/;"	m	struct:Population
+plus_msw	sffs.c	/^fl_tp plus_msw(fl_tp Xk,int msw)$/;"	f
+plus_msw	sffs_older.c	/^fl_tp plus_msw(fl_tp Xk,int msw)$/;"	f
+pm	ga.h	/^    float pm;$/;"	m	struct:Population
+pn	fcbf.h	/^    struct ListNode *pn;$/;"	m	struct:ListNode	typeref:struct:ListNode::ListNode
+pn	micfs.h	/^    struct ListNode *pn;$/;"	m	struct:ListNode	typeref:struct:ListNode::ListNode
+pn	sffs.h	/^    struct FeatureNode *pn;$/;"	m	struct:FeatureNode	typeref:struct:FeatureNode::FeatureNode
+population	ga.h	/^}population;$/;"	t	typeref:struct:Population
+pos	mic.h	/^	int   pos;$/;"	m	struct:Point
+prt_bst	main.c	/^void prt_bst(resfts bst,mic_matrix M) $/;"	f
+q_sort	mic.c	/^void q_sort ( data_type * sd, int l )$/;"	f
+qksort	ga.c	/^void qksort(population *pop)$/;"	f
+qs	mic.c	/^void qs (data_type *sd ,int left , int right )$/;"	f
+qsp	ga.c	/^void qsp(int a,int b,population *pop)$/;"	f
+read_content	read_content.c	/^float ** read_content(fct *file)$/;"	f
+read_mic_matrix	mic_matrix.c	/^float ** read_mic_matrix(char *fnm)$/;"	f
+read_pair	mic.c	/^int read_pair(char *filename,int xa,int yb,data_type *x,data_type *y)$/;"	f
+resfts	main.h	/^}resfts,*rfl_ptr;$/;"	t	typeref:struct:ResultFeatures
+rfl_ptr	main.h	/^}resfts,*rfl_ptr;$/;"	t	typeref:struct:ResultFeatures
+rn	mic.h	/^	int rn;$/;"	m	struct:Label
+rnd	mic.c	/^int rnd ( float x )$/;"	f
+rp	mic.c	/^void rp(FILE * src,int xa ,int yb, data_type *x ,data_type *y)$/;"	f
+sel_one	ga.c	/^chro_ptr sel_one(population pop)$/;"	f
+sffs	sffs.c	/^fl_tp sffs(mic_matrix M,int n)$/;"	f
+sffs	sffs_older.c	/^fl_tp sffs(mic_matrix M,int n)$/;"	f
+sffs_rf	main.c	/^rfl_ptr sffs_rf(mic_matrix M,int n)$/;"	f
+sig	ga.h	/^    float sig;$/;"	m	struct:Chrosome
+sig	main.h	/^    float sig;$/;"	m	struct:ResultFeatures
+sig	sffs.h	/^    float sig;      \/\/the significane of current feature list $/;"	m	struct:FeatureList
+sig	sffs.h	/^    float sig;$/;"	m	struct:FeatureNode
+smr	mic.c	/^int smr (Points *D,data_type *sdx,int a,int b)$/;"	f
+smx	mic.c	/^int smx (data_type *sdx,int a,int b)$/;"	f
+swap	mic.c	/^void swap (data_type * sd,int a,int b)$/;"	f
+tail	fcbf.h	/^    list_node * tail;$/;"	m	struct:List
+tail	micfs.h	/^    list_node * tail;$/;"	m	struct:List
+tail	sffs.h	/^    fet_tp tail;$/;"	m	struct:FeatureList
+update_Xk_merit	sffs.c	/^void update_Xk_merit(fl_tp Xk,mic_matrix M)$/;"	f
+update_pop	ga.c	/^void update_pop(population *S,mic_matrix M)$/;"	f
+usage	para_chk.c	/^void usage()$/;"	f
+val	mic.h	/^	double val;$/;"	m	struct:Point
+vd	mic.c	/^void vd (Points *D,data_type * sdx, int l)$/;"	f
+vyp	mic.c	/^void vyp ( int y , int * yp )$/;"	f
+x	mic.h	/^	data_type * x;$/;"	m	struct:DataSet
+y	mic.h	/^	data_type * y;$/;"	m	struct:DataSet

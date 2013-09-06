@@ -78,6 +78,35 @@ def func_value(rand_func,file_name):
     f.close()
 
 """
+    Generate the mixed test file
+"""
+def mix_value(file_name):
+    final=[]
+    val_sum=[0]*500
+    for func in func_list:
+        rand_fun=random.choice([random.randint,random.uniform])
+        new=[]
+        for x in range(0,500):
+            x_val=rand_fun(0,100)
+            print "Now sum",x,val_sum[x]
+            val_sum[x]=val_sum[x]+func(x_val)
+            new.append(x_val)
+        final.append(new)
+    for x in range(0,5):
+        new=[random.random()]*500
+        final.append(new)
+    final.append(val_sum)
+    f=open(file_name,"w")
+    for x in range(0,500):
+        line=[]
+        for val in final:
+            line.append(val[x])
+        line=",".join([str(v) for v in line])+"\n"
+        f.write(line)
+    f.close()
+
+
+"""
     The main function will calculate the average and standard
     devitation of mic for each function.Every column represents
     the correspond mic values.
@@ -106,7 +135,15 @@ def equility():
     float_stdv=np.std(sum_mic_float,axis=0)
     print "X_FLT\n",float_mean,"\n",float_stdv
 
+"""
+    This main funtion is going to generate the simulated
+    files in random int or uniform data
+"""
 if __name__=='__main__':
-    print "Test!"
-    func_value(random.randint,sys.argv[1])
+    choice=[[random.randint,"int"],[random.uniform,"float"]]
+    for rand in choice:
+        for i in range(0,5):
+            func_value(rand[0],rand[1]+"_"+str(i)+".csv")
+    for x in range(0,5):
+        mix_value("mix_"+str(x)+".csv")
 
