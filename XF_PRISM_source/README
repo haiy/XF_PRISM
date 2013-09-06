@@ -1,8 +1,0 @@
-date:Tue Apr 23 15:02:22 CST 2013
-author:haiy
-contact:haiyangfu512@gmail.com
-description:
-这个版本的mic主要是实现了从存储的mic文件中
-读取mic值并存储在数组中。
-并将所有的输入文件在一个文件夹中。
-
