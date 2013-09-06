@@ -2,6 +2,7 @@
 #Wed Sep  4 00:58:46 CST 2013
 #Authot:haiy
 
+import sys
 import math
 import random
 import subprocess
@@ -107,5 +108,5 @@ def equility():
 
 if __name__=='__main__':
     print "Test!"
-    func_value(random.randint,"INT")
+    func_value(random.randint,sys.argv[1])
 
