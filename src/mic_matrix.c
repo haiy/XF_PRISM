@@ -1,5 +1,5 @@
 #include"mic_matrix.h"
-void fill_mic_matrix(char *fnm,mic_matrix *M,float exp,float f)
+void fill_mic_matrix(char *fnm,mic_matrix *M)
 {
 	M->atrn=count_atr(fnm);
 	M->class_idx=M->atrn-1;

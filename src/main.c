@@ -30,12 +30,12 @@ int main(int argc,char *argv[])
 {
     mic_matrix M;
     char *fnm=argv[1];
-    if(argc<3)
+    if(argc>2)
     {
         printf("Parameters Error!");
         exit(1);
     }
-    fill_mic_matrix(fnm,&M,atof(argv[2]),atof(argv[3]));
+    fill_mic_matrix(fnm,&M);
 
     printf("GA find ");
     int pop_size;
@@ -46,9 +46,6 @@ int main(int argc,char *argv[])
     rfl_ptr gabst=gafs(M,pop_size,loop_time,pc,pm);
     chk_bst(*gabst);
 
-    free(gabst->atrs);
-    free(gabst);
-
     printf("SFFS find ");
     int d;
     /* d is the size of target feature set */
@@ -56,8 +53,6 @@ int main(int argc,char *argv[])
 
     rfl_ptr sfbst=sffs_rf(M,d);
     chk_bst(*sfbst);
-    free(sfbst->atrs);
-    free(sfbst);
 
     printf("FCFS find ");
     float threshold;
@@ -65,8 +60,6 @@ int main(int argc,char *argv[])
 
     rfl_ptr fcbst=fcfs_rf(M,threshold);
     chk_bst(*fcbst);
-    free(fcbst->atrs);
-    free(fcbst);
 //    puts("");
 //    check_mic_matrix(M);
 
