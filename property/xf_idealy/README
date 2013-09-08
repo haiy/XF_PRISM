@@ -1,23 +1,15 @@
+测试思路
+1.生成范围在（0，500）内的100个点，分别满足下面的6个方程，
+然后分别对每个方程的每个测试类别生成四组数据。每组数据的前
+6列依次是对应的方程的x值，此值为随机数。后面5列为也为完全随机数，但是最后一列的y值为前6列的随机数作为自变量经过方程
+处理后的和，也就是说，y=y1(x1)+y2(x2)+...+y5(x5)+y6(x6)
 
-How to use "main"
+2.方程顺序为：
+func_list=[linear_fun,non_linear,fourior_fun,sin_fun,cube_fun,norm_fun]
 
-RunCommand:  ./main source_file < mic_conf_file
-
-Note:
-The "source_file" is the original file maybe 
-with csv suffix.While the "mic_conf_file" has
-two parts,the first N lines are the MIC matrix
-and the second part is the parameters for all
-search algorithm.
-
-A sample mic_conf_file file:
-
-0
-0.1324 0.342
-0.234  0.242 0.34
-0.1345 0.95  0.765 0.53
-200 600 0.6 0.1  (for GA,sizeof the population,generations,crossover rate,mututation  rate)
-5  (for SFFS, the target number of features)
-0.0 (fot FCBF,the threshold)
-
-
+0:  y=x
+1:  y=x*sin(x)
+2:  y=sin(16*PI*x)+x
+3:  y=sin(x)
+4:  y=x^3
+5:  y=正态函数
