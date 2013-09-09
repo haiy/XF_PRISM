@@ -1,7 +1,13 @@
+===================
 Date:Tue Sep  3 22:52:56 CST 2013
 Author:haiy
-Description:
+===================
+About:
     function to test the cosistency between discrete and continous
+    It will output the result to a file named
+    "fn_res.csv".
+===================
 How to use:
 1.mic_set (opa vsrsion) is needed
 2. python single_func.py
+

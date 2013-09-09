@@ -7,6 +7,10 @@ import random
 import subprocess
 import numpy as np
 
+"""
+ Below are the test functions to generate
+ (x,y)pairs.
+"""
 
 def linear_fun(x):
     return x
@@ -29,10 +33,8 @@ def norm_fun(x,mu=0,siga=1):
     the relevant f(lx) list,and the use mic_set to calculate 
     the MIC of the  pair
 """
-def init_x(func,lx):
-    yx=[]
-    yx=[func(x) for x in lx]
-    pairs=zip(lx,yx)
+def init_x(ly,lx):
+    pairs=zip(lx,ly)
     fp=open("tmp.txt",'w')
     for x in pairs:
         fp.write(str(x[0])+str(',')+str(x[1])+str('\n'))
@@ -42,46 +44,37 @@ def init_x(func,lx):
     mic=mic.strip("\n")
     return mic
 
-"""
-    Use various function to generate the f(lx) pairs ,and store
-    the MIC of each pair to  list "new".
-"""
-def funcs_mic(lx,func_list):
-    new=[]
-    for func in func_list:
-        new.append(float(init_x(func,lx)))
-    return new
-
-
 func_list=[linear_fun,non_linear,fourior_fun,sin_fun,cube_fun,norm_fun]
+func_nls=["Linear","Non-linear","Fourier","Sin","Cube","Normal"]
+func_pair=zip(func_list,func_nls)
 
 """
-    The main function will calculate the average and standard
-    devitation of mic for each function.Every column represents
-    the correspond mic values.
+    A sinlge function's various operations.
 """
+def single_func(func):
+    res_single=[]
+    for rand in [[random.randint,"Discrete"],[random.uniform,"Continuous"]]:
+        all_mic=[]
+        lx=[rand[0](0,100) for x in range(0,500)]
+        for p in range(0,100,10):
+            p=float(p)/100
+            ly=[func[0](x) for x in lx]
+            for m in range(0,int(len(lx)*p)):
+                ly[m]=rand[0](0,100)
+            all_mic.append(str(init_x(lx,ly)))
+        all_mic.insert(0,func[1]+rand[1])
+        all_mic=",".join(all_mic)
+        res_single.append(all_mic)
+    return res_single
+
 if __name__=="__main__":
-    sum_mic_int=[]
-    sum_mic_float=[]
-    """
-        Simulate each function  N times
-    """
-    N=10
-    for x in range(0,N):
-        lx_int=[random.randint(0,100) for x in range(0,500)]
-        lx_float=[random.uniform(0,100) for x in range(0,500)]
-        sum_mic_int.append(funcs_mic(lx_int,func_list))
-        sum_mic_float.append(funcs_mic(lx_float,func_list))
-    mic_int=np.array(sum_mic_int)
-    print "INT\n",mic_int
-    mic_float=np.array(sum_mic_float)
-    int_mean=np.mean(mic_int,axis=0)
-    int_stdv=np.std(sum_mic_int,axis=0)
-    print "X_INT\n",int_mean,"\n",int_stdv
+    res=[]
+    for func in func_pair:
+        res.append(single_func(func))
+        print func[1]," finished!"
 
-    print "FLT\n",mic_float
-    float_mean=np.mean(mic_float,axis=0)
-    float_stdv=np.std(sum_mic_float,axis=0)
-    print "X_FLT\n",float_mean,"\n",float_stdv
-
-
+    f=open("fn_res.csv",'w')
+    for x in res:
+        for n in x:
+            f.write(n+"\n")
+    f.close()

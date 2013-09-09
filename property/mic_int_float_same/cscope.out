@@ -1,0 +1,658 @@
+cscope 15 $HOME/Documents/Github/XF_PRISM/property/mic_int_float_same -q 0000000105 0000002666
+	@single_func.py
+
+1 #!/
+u§
+/
+bö
+/
+pyth⁄
+
+
+2 #Wed 
+Sï
+ 4 00:58:46 
+CST
+ 2013
+
+3 #AuthŸ:
+haiy
+
+
+5 
+imp‹t
+ 
+m©h
+
+
+6 
+imp‹t
+ 
+øndom
+
+
+7 
+imp‹t
+ 
+sub¥o˚ss
+
+
+8 
+imp‹t
+ 
+numpy
+ 
+as
+ 
+≈
+
+
+11 
+def
+ 
+	$löór_fun
+(
+x
+):
+
+12  
+x
+
+
+13 
+def
+ 
+	$sö_fun
+(
+x
+):
+
+14  
+m©h
+.
+	$sö
+(
+x
+)
+
+15 
+def
+ 
+	$cube_fun
+(
+x
+):
+
+16  
+m©h
+.
+	$pow
+(
+x
+,3)
+
+17 
+def
+ 
+	$n⁄_löór
+(
+x
+):
+
+18  
+x
+*
+m©h
+.
+	$sö
+(
+x
+)
+
+19 
+def
+ 
+	$fouri‹_fun
+(
+x
+):
+
+20  
+m©h
+.
+	`sö
+(16*m©h.
+pi
+*
+x
+)+x
+
+21 
+def
+ 
+	$n‹m_fun
+(
+x
+,
+mu
+=0,
+siga
+=1):
+
+22 
+a
+=1/(
+siga
+*
+≈
+.
+	$sqπ
+(2*
+≈
+.
+pi
+))
+
+23 
+b
+=-(
+x
+-
+mu
+)**2/(2*
+siga
+**2)
+
+24  
+a
+*
+≈
+.
+	`exp
+(
+b
+)
+
+28 
+öô_x
+ 
+wûl
+ 
+fú°ly
+ 
+övoke
+ 
+the
+ "func" 
+fun˘i⁄
+ 
+to
+ 
+gíî©e
+
+
+29 
+the
+ 
+ªÀv™t
+ 
+	$f
+(
+lx
+Ë
+li°
+,
+™d
+ 
+the
+ 
+u£
+ 
+mic_£t
+ 
+to
+ 
+ˇlcuœã
+
+
+30 
+the
+ 
+MIC
+ 
+of
+Åhê
+∑ú
+
+
+32 
+def
+ 
+	$öô_x
+(
+ly
+,
+lx
+):
+
+33 
+∑ús
+=
+	$zù
+(
+lx
+,
+yx
+)
+
+34 
+Â
+=
+	`›í
+("tmp.txt",'w')
+
+35 
+x
+ 
+ö
+ 
+∑ús
+:
+
+36 
+Â
+.
+	`wrôe
+(
+	`°r
+(
+x
+[0])+str(',')+str(x[1])+str('\n'))
+
+37 
+Â
+.
+	$˛o£
+()
+
+38 
+mic
+=
+sub¥o˚ss
+.
+	`check_ouçut
+(['./mic_set','tmp.txt','0','1','0.7','15'])
+
+39 
+sub¥o˚ss
+.
+	`check_ouçut
+(['rm','tmp.txt'])
+
+40 
+mic
+=mic.
+	`°rù
+("\n")
+
+41  
+mic
+
+
+43 
+func_li°
+=[
+löór_fun
+,
+n⁄_löór
+,
+fouri‹_fun
+,
+sö_fun
+,
+cube_fun
+,
+n‹m_fun
+]
+
+46 
+The
+ 
+maö
+ 
+fun˘i⁄
+ 
+wûl
+ 
+ˇlcuœã
+ 
+the
+ 
+avîage
+ 
+™d
+ 
+°™d¨d
+
+
+47 
+devô©i⁄
+ 
+of
+ 
+mic
+ 
+óch
+ 
+fun˘i⁄
+.
+Evîy
+ 
+cﬁumn
+ 
+ª¥e£¡s
+
+
+48 
+the
+ 
+c‹ª•⁄d
+ 
+mic
+ 
+vÆues
+.
+
+50 
+__«me__
+=="__main__":
+
+51 
+sum_mic_öt
+=[]
+
+52 
+sum_mic_Êﬂt
+=[]
+
+54 
+Simuœã
+ 
+óch
+ 
+fun˘i⁄
+ 
+N
+ 
+times
+
+
+56 
+N
+=10
+
+57 
+x
+ 
+ö
+ 
+	$ønge
+(0,
+N
+):
+
+58 
+lx_öt
+=[
+øndom
+.
+	$øndöt
+(0,100Ë
+x
+ 
+ö
+ 
+	`ønge
+(0,500)]
+
+59 
+lx_Êﬂt
+=[
+øndom
+.
+	$unif‹m
+(0,100Ë
+x
+ 
+ö
+ 
+	`ønge
+(0,500)]
+
+60 
+sum_mic_öt
+.
+	`≠≥nd
+(
+	$funcs_mic
+(
+lx_öt
+,
+func_li°
+))
+
+61 
+sum_mic_Êﬂt
+.
+	`≠≥nd
+(
+	$funcs_mic
+(
+lx_Êﬂt
+,
+func_li°
+))
+
+62 
+mic_öt
+=
+≈
+.
+	$¨øy
+(
+sum_mic_öt
+)
+
+63 
+¥öt
+ "INT\n",
+mic_öt
+
+
+64 
+mic_Êﬂt
+=
+≈
+.
+	$¨øy
+(
+sum_mic_Êﬂt
+)
+
+65 
+öt_món
+=
+≈
+.
+	$món
+(
+mic_öt
+,
+axis
+=0)
+
+66 
+öt_°dv
+=
+≈
+.
+	$°d
+(
+sum_mic_öt
+,
+axis
+=0)
+
+67 
+¥öt
+ "X_INT\n",
+öt_món
+,"\n",
+öt_°dv
+
+
+69 
+¥öt
+ "FLT\n",
+mic_Êﬂt
+
+
+70 
+Êﬂt_món
+=
+≈
+.
+	$món
+(
+mic_Êﬂt
+,
+axis
+=0)
+
+71 
+Êﬂt_°dv
+=
+≈
+.
+	$°d
+(
+sum_mic_Êﬂt
+,
+axis
+=0)
+
+72 
+¥öt
+ "X_FLT\n",
+Êﬂt_món
+,"\n",
+Êﬂt_°dv
+
+
+74 
+__«me__
+=="__main__":
+
+75 
+ªs
+=[]
+
+76 
+func
+=
+löór_fun
+
+
+77 
+ønd
+ 
+ö
+ [
+øndom
+.
+øndöt
+,øndom.
+unif‹m
+]:
+
+78 
+Æl_mic
+=[]
+
+79 
+lx
+=[
+	$ønd
+(0,100Ë
+x
+ 
+ö
+ 
+	`ønge
+(0,500)]
+
+80 
+p
+ 
+ö
+ 
+	$ønge
+(0,100,10):
+
+81 
+p
+=(p)/100
+
+82 
+ly
+=[
+	$func
+(
+x
+Ëx 
+ö
+ 
+lx
+]
+
+83 
+m
+ 
+ö
+ 
+	`ønge
+(0,
+	`Àn
+(
+lx
+)*
+p
+):
+
+84 
+ly
+[
+m
+]=
+	$ønd
+(0,100)
+
+85 
+Æl_mic
+.
+	`≠≥nd
+(
+	`öô_x
+(
+lx
+,
+ly
+))
+
+	@
+1
+.
+0
+1
+15
+single_func.py

@@ -1,0 +1,35 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+N	single_func.py	/^    N=10$/;"	v
+all_mic	single_func.py	/^        all_mic=[]$/;"	v
+cube_fun	single_func.py	/^def cube_fun(x):$/;"	f
+float_mean	single_func.py	/^    float_mean=np.mean(mic_float,axis=0)$/;"	v
+float_stdv	single_func.py	/^    float_stdv=np.std(sum_mic_float,axis=0)$/;"	v
+fourior_fun	single_func.py	/^def fourior_fun(x):$/;"	f
+func	single_func.py	/^    func=linear_fun$/;"	v
+func_list	single_func.py	/^func_list=[linear_fun,non_linear,fourior_fun,sin_fun,cube_fun,norm_fun]$/;"	v
+init_x	single_func.py	/^def init_x(ly,lx):$/;"	f
+int_mean	single_func.py	/^    int_mean=np.mean(mic_int,axis=0)$/;"	v
+int_stdv	single_func.py	/^    int_stdv=np.std(sum_mic_int,axis=0)$/;"	v
+linear_fun	single_func.py	/^def linear_fun(x):$/;"	f
+lx	single_func.py	/^        lx=[rand(0,100) for x in range(0,500)]$/;"	v
+lx_float	single_func.py	/^        lx_float=[random.uniform(0,100) for x in range(0,500)]$/;"	v
+lx_int	single_func.py	/^        lx_int=[random.randint(0,100) for x in range(0,500)]$/;"	v
+ly	single_func.py	/^            ly=[func(x) for x in lx]$/;"	v
+math	single_func.py	/^import math$/;"	i
+mic_float	single_func.py	/^    mic_float=np.array(sum_mic_float)$/;"	v
+mic_int	single_func.py	/^    mic_int=np.array(sum_mic_int)$/;"	v
+non_linear	single_func.py	/^def non_linear(x):$/;"	f
+norm_fun	single_func.py	/^def norm_fun(x,mu=0,siga=1):$/;"	f
+np	single_func.py	/^import numpy as np$/;"	i
+p	single_func.py	/^            p=float(p)\/100$/;"	v
+random	single_func.py	/^import random$/;"	i
+res	single_func.py	/^    res=[]$/;"	v
+sin_fun	single_func.py	/^def sin_fun(x):$/;"	f
+subprocess	single_func.py	/^import subprocess$/;"	i
+sum_mic_float	single_func.py	/^    sum_mic_float=[]$/;"	v
+sum_mic_int	single_func.py	/^    sum_mic_int=[]$/;"	v
