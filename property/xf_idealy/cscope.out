@@ -1,4 +1,372 @@
-cscope 15 $HOME/Documents/Github/XF_PRISM/property/xf_idealy -q 0000000128 0000003287
+cscope 15 $HOME/Documents/Github/XF_PRISM/property/xf_idealy -q 0000000125 0000004748
+	@extract_sf.py
+
+1 
+impÜt
+ 
+	gos
+.
+·th
+
+
+2 
+äom
+ 
+sys
+ 
+impÜt
+ 
+	g¬gv
+
+
+3 #po 
+d’Ùes
+ 
+the
+ 
+pos™iÚ
+ 
+wh”e
+ 
+to
+ 
+begš
+Ø
+»ad
+
+
+4 
+def
+ 
+	$»ad_šfo
+(
+pos
+,
+šfo_fe
+):
+
+5 
+åŒ
+=
+	$İ’
+(
+šfo_fe
+)
+
+6 
+»suÉ
+=[]
+
+7 
+åŒ
+.
+	$£ek
+(
+pos
+)
+
+8 #»ad 
+što
+ 
+the
+ 
+fœ¡
+ 
+lše
+ 
+of
+h
+cu¼’t
+ 
+pos
+
+
+9 
+Çme
+=
+åŒ
+.
+	`»adlše
+().
+	`¡r
+("\À,").
+	`¥l™
+()[0]
+
+10 
+»suÉ
+.
+	$­³nd
+(
+Çme
+)
+
+11 
+lše
+=
+åŒ
+.
+	`»adlše
+().
+	`¡r
+("\À,").
+	`¥l™
+(",")
+
+12 
+lše
+=[(
+x
+.
+	`¥l™
+(":")[0]èx 
+š
+†ine]
+
+13 
+lše
+.
+	$sÜt
+()
+
+14 
+»suÉ
+.
+	$­³nd
+(
+lše
+)
+
+15 
+»suÉ
+.
+	`­³nd
+(
+åŒ
+.
+	$‹Î
+())
+
+16 
+åŒ
+.
+	$şo£
+()
+
+17  
+»suÉ
+
+
+19 #šfØ
+is
+ 
+a
+ 
+li¡
+ 
+like
+ [["GA"],[1,3,5,10]]
+
+20 
+def
+ 
+	$wr™e_»suÉ
+(
+¤c_fe
+,
+šfo
+):
+
+21 
+¤c
+=
+	$İ’
+(
+¤c_fe
+)
+
+22 
+d¡_Çme
+=
+šfo
+[0]+"_"+
+os
+.
+·th
+.
+	$ba£Çme
+(
+¤c_fe
+)
+
+23 
+d¡
+=
+	`İ’
+(
+d¡_Çme
+,"w")
+
+24 
+Ê
+=
+	`Ën
+(
+¤c
+.
+	`»adlše
+().
+	`¥l™
+(","))
+
+25 
+¤c
+.
+	`£ek
+(0,0);
+
+26 
+l
+ 
+š
+ 
+¤c
+:
+
+27 
+l
+ö.
+	`¡r
+("\n").
+	`¥l™
+(",")
+
+28 
+lše
+=[]
+
+29 
+	`Ën
+(
+l
+è!ğ
+Ê
+:
+
+30 
+´št
+ "Notƒqualƒlements†ine."
+
+32 
+x
+ 
+š
+ 
+šfo
+[1]:
+
+33 
+lše
+.
+	$­³nd
+(
+l
+[
+x
+])
+
+34 
+lše
+.
+	`­³nd
+(
+l
+[-1])
+
+35 
+lše
+=",".
+	`još
+(line)+"\n"
+
+36 
+d¡
+.
+	$wr™e
+(
+lše
+)
+
+37 
+¤c
+.
+	$şo£
+()
+
+38 
+d¡
+.
+	$şo£
+()
+
+40 
+__Çme__
+=="__main__":
+
+41 
+süt
+,
+šfo_fe
+=
+¬gv
+
+
+42 
+šfo
+=
+	$»ad_šfo
+(0,
+šfo_fe
+)
+
+43 
+´št
+ 
+šfo
+
+
+44 
+šfo
+=
+	$»ad_šfo
+(
+šfo
+[2],
+šfo_fe
+)
+
+45 
+´št
+ 
+šfo
+
+
+46 
+šfo
+=
+	$»ad_šfo
+(
+šfo
+[2],
+šfo_fe
+)
+
+47 
+´št
+ 
+šfo
+
+
 	@single_func.py
 
 1 #!/
@@ -44,10 +412,34 @@ numpy
  
 as
  
-Å
+	gÅ
 
 
 11 
+B–ow
+ 
+¬e
+ 
+the
+ 
+‹¡
+ 
+funùiÚs
+ 
+to
+ 
+	gg’”©e
+
+
+12 (
+	gx
+,
+	gy
+)
+	g·œs
+.
+
+15 
 def
  
 	$lš—r_fun
@@ -55,11 +447,11 @@ def
 x
 ):
 
-12  
+16  
 x
 
 
-13 
+17 
 def
  
 	$sš_fun
@@ -67,41 +459,7 @@ def
 x
 ):
 
-14  
-m©h
-.
-	$sš
-(
-x
-)
-
-15 
-def
- 
-	$cube_fun
-(
-x
-):
-
-16  
-m©h
-.
-	$pow
-(
-x
-,3)
-
-17 
-def
- 
-	$nÚ_lš—r
-(
-x
-):
-
 18  
-x
-*
 m©h
 .
 	$sš
@@ -112,12 +470,46 @@ x
 19 
 def
  
-	$fouriÜ_fun
+	$cube_fun
 (
 x
 ):
 
 20  
+m©h
+.
+	$pow
+(
+x
+,3)
+
+21 
+def
+ 
+	$nÚ_lš—r
+(
+x
+):
+
+22  
+x
+*
+m©h
+.
+	$sš
+(
+x
+)
+
+23 
+def
+ 
+	$fouriÜ_fun
+(
+x
+):
+
+24  
 m©h
 .
 	`sš
@@ -127,7 +519,7 @@ pi
 x
 )+x
 
-21 
+25 
 def
  
 	$nÜm_fun
@@ -139,7 +531,7 @@ mu
 siga
 =1):
 
-22 
+26 
 a
 =1/(
 siga
@@ -153,7 +545,7 @@ siga
 pi
 ))
 
-23 
+27 
 b
 =-(
 x
@@ -163,7 +555,7 @@ mu
 siga
 **2)
 
-24  
+28  
 a
 *
 Å
@@ -173,7 +565,7 @@ a
 b
 )
 
-26 
+32 
 func_li¡
 =[
 lš—r_fun
@@ -189,656 +581,640 @@ cube_fun
 nÜm_fun
 ]
 
-29 
-š™_x
- 
-wl
- 
-fœ¡ly
- 
-švoke
- 
-the
- "func" 
-funùiÚ
- 
-to
- 
-g’”©e
-
-
-30 
-the
- 
-»Ëvªt
- 
-	$f
-(
-lx
-è
-li¡
-,
-ªd
- 
-the
- 
-u£
- 
-mic_£t
- 
-to
- 
-ÿlcuÏ‹
-
-
-31 
-the
- 
-MIC
- 
-of
-h
-·œ
-
-
 33 
-def
- 
-	$š™_x
-(
-func
-,
-lx
-):
+func_Æs
+=["Linear","Non-linear","Fourier","Sin","Cube","Normal"]
 
 34 
-yx
-=[]
-
-35 
-yx
-=[
-	$func
-(
-x
-èx 
-š
- 
-lx
-]
-
-36 
-·œs
+func_·œ
 =
 	$z
 (
-lx
+func_li¡
 ,
-yx
+func_Æs
 )
 
+36 
+def
+ 
+	$pu»_func
+(
+f’ame
+,
+¿nd
+,
+p
+=0):
+
 37 
-å
+f
 =
 	`İ’
-("tmp.txt",'w')
-
-38 
-x
- 
-š
- 
-·œs
-:
-
-39 
-å
-.
-	`wr™e
 (
-	`¡r
-(
-x
-[0])+str(',')+str(x[1])+str('\n'))
+f’ame
+,'w')
 
-40 
-å
-.
-	$şo£
-()
+38 
+ú
+=0
 
-41 
-mic
-=
-sub´oûss
-.
-	`check_ouut
-(['./mic_set','tmp.txt','0','1','0.7','15'])
-
-42 
-sub´oûss
-.
-	`check_ouut
-(['rm','tmp.txt'])
-
-43 
-mic
-=mic.
-	`¡r
-("\n")
-
-44  
-mic
-
-
-47 
-U£
- 
-v¬ious
- 
-funùiÚ
- 
-to
- 
-g’”©e
- 
-the
- 
-	$f
-(
-lx
-è
-·œs
- ,
-ªd
- 
-¡Üe
-
-
-48 
-the
- 
-MIC
- 
-of
- 
-—ch
- 
-·œ
- 
-to
- 
-li¡
- "new".
-
-50 
-def
- 
-	$funcs_mic
-(
-lx
-,
-func_li¡
-):
-
-51 
-Ãw
-=[]
-
-52 
-func
- 
-š
- 
-func_li¡
-:
-
-53 
-Ãw
-.
-	`­³nd
-((
-	$š™_x
-(
-func
-,
-lx
-)))
-
-54  
-Ãw
-
-
-57 
-This
- 
-funùiÚ
- 
-wl
- 
-g’”©e
- 
-a
- 
-m©rix
-,
-š
- 
-which
- 
-—ch
-
-
-58 
-cŞoumn
- 
-is
- 
-a
- 
-¿ndom
- 
-numb”
- 
-th©
- 
-d’Ùes
- 
-the
- 
-x
- 
-v®ue
-
-
-59 
-of
- 
-the
- 
-funùiÚ
-,th
-fš®
- 5 
-cŞumns
- 
-¬e
- 
-fËd
- 
-w™h
-
-
-60 
-¿ndom
- 
-numb”s
- 
-exû±
- 
-the
- 
-Ï¡
- 
-Úe
-.
-The
-†a¡ 
-cŞumn
-
-
-61 
-is
- 
-the
- 
-sum
- 
-of
-h
-	$f
-(
-x
-è
-v®ues
- 
-of
- 
-the
- 
-funùiÚs
-.
-
-63 
-def
- 
-	$func_v®ue
-(
-¿nd_func
-):
-
-64 
-şass_v®ue
-=[]
-
-65 
-x
+39 
+lše
  
 š
  
 	$¿nge
 (0,500):
 
-66 
-Ãw
-=[]
-
-67 
-¿nd_fl
+40 
+lx
 =[
-	`¿nd_func
-(0,100)]*5
-
-68 
-v®_sum
-=0
-
-69 
-func
+	$¿nd
+(0,100è
+x
  
 š
  
-func_li¡
-:
+	`¿nge
+(0,12)]
 
-70 
-¿nd_x
+41 
+y
+=0
+
+42 
+ú
+<(500*
+p
+):
+
+43 
+y
 =
-	$¿nd_func
+	$¿nd
 (0,100)
 
-71 
-v®_sum
-=v®_sum+
-	$func
+44 
+ú
+=cn+1
+
+46 
+x
+ 
+š
+ 
+	`¿nge
+(0,
+	$Ën
+(
+func_li¡
+)):
+
+47 
+y
+=y+
+func_li¡
+[
+x
+](
+lx
+[x])
+
+48 
+lx
+=[
+	$¡r
 (
 x
-)
+èx 
+š
+ 
+lx
+ ]
 
-72 
-Ãw
+49 
+f
 .
-	$­³nd
+	`wr™e
+(",".
+	`još
 (
-¿nd_x
-)
-
-73 
-Ãw
-òew+
-¿nd_fl
-
-
-74 
-Ãw
-.
-	$­³nd
+lx
+)+','+
+	`¡r
 (
-v®_sum
-)
+y
+)+'\n')
 
-75 
-şass_v®ue
+50 
+f
 .
-	$­³nd
-(
-Ãw
-)
+	$şo£
+()
 
-76  
-şass_v®ue
-
-
-79 
-The
- 
-maš
- 
-funùiÚ
- 
-wl
- 
-ÿlcuÏ‹
- 
-the
- 
-av”age
- 
-ªd
- 
-¡ªd¬d
-
-
-80 
-dev™©iÚ
- 
-of
- 
-mic
- 
-—ch
- 
-funùiÚ
-.
-Ev”y
- 
-cŞumn
- 
-»´e£Ás
-
-
-81 
-the
- 
-cÜ»¥Úd
- 
-mic
- 
-v®ues
-.
-
-83 
+53 
 def
  
-	$equ™y
-():
+	$mix_func
+(
+f’ame
+,
+p
+=0):
 
-84 
-sum_mic_št
-=[]
+54 
+f
+=
+	`İ’
+(
+f’ame
+,'w')
 
-85 
-sum_mic_æßt
-=[]
-
-87 
-SimuÏ‹
+55 
+¿nd
+=[
+¿ndom
+.
+	$choiû
+([
+¿ndom
+.
+¿ndšt
+,¿ndom.
+unifÜm
+]è
+x
  
-—ch
+š
  
-funùiÚ
+	`¿nge
+(0,12)]
+
+56 
+ú
+=0
+
+57 
+lše
  
-N
+š
  
-times
+	$¿nge
+(0,500):
 
+58 
+lx
+=[
+¿nd
+[
+x
+](0,100èx 
+š
+ 
+	`¿nge
+(0,12)]
 
-89 
-N
-=10
+59 
+y
+=0
 
-90 
+60 
+ú
+<(500*
+p
+):
+
+61 
+y
+=
+¿ndom
+.
+	$unifÜm
+(0,100)
+
+62 
+ú
+=cn+1
+
+64 
+x
+ 
+š
+ 
+	`¿nge
+(0,
+	$Ën
+(
+func_li¡
+)):
+
+65 
+y
+=y+
+func_li¡
+[
+x
+](
+lx
+[x])
+
+66 
+lx
+=[
+	$¡r
+(
+x
+èx 
+š
+ 
+lx
+ ]
+
+67 
+f
+.
+	`wr™e
+(",".
+	`još
+(
+lx
+)+','+
+	`¡r
+(
+y
+)+'\n')
+
+68 
+f
+.
+	$şo£
+()
+
+70 
+__Çme__
+=="__main__":
+
+71 
+¿nd_·œ
+=[[
+¿ndom
+.
+¿ndšt
+,"Dis"],[¿ndom.
+unifÜm
+,"Con"]]
+
+72 
+¿nd
+ 
+š
+ 
+¿nd_·œ
+:
+
+73 
+p
+=0
+
+74 
 x
  
 š
  
 	$¿nge
+(0,10):
+
+75 
+p
+=(
+x
+)/10
+
+76 
+	`pu»_func
+(
+¿nd
+[1]+'_'+
+	`¡r
+(
+p
+)+".csv",rand[0],p)
+
+77 
+p
+=0
+
+78 
+x
+ 
+š
+ 
+	$¿nge
+(0,10):
+
+79 
+p
+=(
+x
+)/10
+
+80 
+	`mix_func
+("Mix_"+
+	`¡r
+(
+p
+)+".csv",p)
+
+	@split_result.py
+
+1 #-*- 
+codšg
+: 
+utf
+-8 -*-
+
+2 
+impÜt
+ 
+sys
+
+
+3 
+äom
+ 
+sys
+ 
+impÜt
+ 
+	g¬gv
+
+
+6 
+	gf
+=
+	$İ’
+(
+sys
+.
+¬gv
+[1])
+
+7 
+n
+=Ğ
+	`Ën
+(
+f
+.
+	`»adlše
+().
+	`¥l™
+(",")) )
+
+8 
+f
+.
+	$şo£
+()
+
+10 
+t
+=(
+sys
+.
+¬gv
+[2])
+
+12 
+s
+=(
+	`round
+((
+n
+**2-n)/2.0))
+
+13 #æ­¤å¤„çš„
+ave
+ä¸ºç¬¬ä¸€æ¬¡çš„æœŸæœ›å€¼
+
+14 
+ave
+=
+s
+/
+t
+
+
+15 
+num
+=1
+
+17 
+l
+=
+	$¿nge
 (0,
-N
+n
+)
+
+18 
+p
+=0
+
+19 
+»suÉ
+=[]
+
+21 
+i
+ 
+š
+ 
+	`¿nge
+(1,
+n
++1):
+
+22 
+	`abs
+(
+l
+[
+i
+]è> 2*abs(
+ave
+-
+p
 ):
 
-91 
-lx_št
-=[
-¿ndom
+23 #æ­¤å¤„
+m
+ä¸ºï¼Œè¦ç”¨äºåˆ†å‰²çš„è¡Œå·(å³ï¼šåŒºé—´å†…çš„æœ€åä¸€è¡Œ)
+
+24 
+m
+=
+i
+
+
+25 
+»suÉ
 .
-	$¿ndšt
-(0,100è
-x
+	$­³nd
+(
+m
+)
+
+26 
+ls
  
 š
  
 	`¿nge
-(0,500)]
+(1,
+m
++1):
 
-92 
-lx_æßt
-=[
-¿ndom
+27 ià(
+ls
+-1)%2 == 0:
+
+28 
+N
+=
+ls
+*(ls-1)/2
+
+30 
+N
+=
+ls
+*(ls-2)/2+ls/2
+
+31 #æ­¤å¤„çš„
+ave
+ä¸ºé™¤ç¬¬ä¸€ä¸ªåŒºé—´ä»¥å¤–çš„å…¶å®ƒåŒºé—´çš„æœŸæœ›å€¼
+
+32 
+ave
+=(
+	`round
+((
+s
+-
+N
+)/((
+t
+)-
+num
+)))
+
+33 
+num
+ += 1
+
+35 
+p
+=0
+
+36 
+num
+ =ğ
+t
+:
+
+38 
+p
+=
+l
+[
+i
+]+p
+
+39 
+»suÉ
 .
-	$unifÜm
-(0,100è
+	$­³nd
+(
+n
+)
+
+40 
+»suÉ
+=[
 x
+-1 x 
+š
+„esult]
+
+41 #fÜ 
+k
+ 
+š
+ 
+»suÉ
+:
+
+42 #´šˆ
+k
+,
+
+44 #´šˆ
+the
+ 
+¥l™
+ 
+£ùiÚ
+
+
+45 #th
+šdex
+ 
+begš
+ 
+äom
+ 0 
+but
+ 
+the
+ 
+v®id
+ 
+ouut
+ from 1
+
+46 
+´št
+ 1,
+»suÉ
+[0]
+
+47 
+k
  
 š
  
 	`¿nge
-(0,500)]
+(0,
+t
+-1):
 
-93 
-sum_mic_št
-.
-	`­³nd
-(
-	$funcs_mic
-(
-lx_št
-,
-func_li¡
-))
-
-94 
-sum_mic_æßt
-.
-	`­³nd
-(
-	$funcs_mic
-(
-lx_æßt
-,
-func_li¡
-))
-
-95 
-mic_št
-=
-Å
-.
-	$¬¿y
-(
-sum_mic_št
-)
-
-96 
+48 
 ´št
- "INT\n",
-mic_št
-
-
-97 
-mic_æßt
-=
-Å
-.
-	$¬¿y
-(
-sum_mic_æßt
-)
-
-98 
-št_m—n
-=
-Å
-.
-	$m—n
-(
-mic_št
-,
-axis
-=0)
-
-99 
-št_¡dv
-=
-Å
-.
-	$¡d
-(
-sum_mic_št
-,
-axis
-=0)
-
-100 
-´št
- "X_INT\n",
-št_m—n
-,"\n",
-št_¡dv
-
-
-102 
-´št
- "FLT\n",
-mic_æßt
-
-
-103 
-æßt_m—n
-=
-Å
-.
-	$m—n
-(
-mic_æßt
-,
-axis
-=0)
-
-104 
-æßt_¡dv
-=
-Å
-.
-	$¡d
-(
-sum_mic_æßt
-,
-axis
-=0)
-
-105 
-´št
- "X_FLT\n",
-æßt_m—n
-,"\n",
-æßt_¡dv
-
+ 
+»suÉ
+[
+k
+]+1,result[k+1]
 
 	@
 1
 .
 0
-1
-15
+3
+45
+extract_sf.py
 single_func.py
+split_result.py

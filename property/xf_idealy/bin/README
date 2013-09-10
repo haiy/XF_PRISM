@@ -31,3 +31,10 @@ feature subset. The file contains parameters
 is needed.Here is "par".
 
 $./cal.sh
+
+4.extract the subset from the output files
+
+$python extract_sf.py
+
+This will write all the selected subset to a file named "final_res"
+

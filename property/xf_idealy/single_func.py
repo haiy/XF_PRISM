@@ -2,12 +2,15 @@
 #Wed Sep  4 00:58:46 CST 2013
 #Authot:haiy
 
-import sys
 import math
 import random
 import subprocess
 import numpy as np
 
+"""
+ Below are the test functions to generate
+ (x,y)pairs.
+"""
 
 def linear_fun(x):
     return x
@@ -24,126 +27,56 @@ def norm_fun(x,mu=0,siga=1):
     b=-(x-mu)**2/(2*siga**2)
     return a*np.exp(b)
 
+
+
 func_list=[linear_fun,non_linear,fourior_fun,sin_fun,cube_fun,norm_fun]
+func_nls=["Linear","Non-linear","Fourier","Sin","Cube","Normal"]
+func_pair=zip(func_list,func_nls)
 
-"""
-    init_x will firstly invoke the "func" function to generate
-    the relevant f(lx) list,and the use mic_set to calculate 
-    the MIC of the  pair
-"""
-def init_x(func,lx):
-    yx=[]
-    yx=[func(x) for x in lx]
-    pairs=zip(lx,yx)
-    fp=open("tmp.txt",'w')
-    for x in pairs:
-        fp.write(str(x[0])+str(',')+str(x[1])+str('\n'))
-    fp.close()
-    mic=subprocess.check_output(['./mic_set','tmp.txt','0','1','0.7','15'])
-    subprocess.check_output(['rm','tmp.txt'])
-    mic=mic.strip("\n")
-    return mic
-
-"""
-    Use various function to generate the f(lx) pairs ,and store
-    the MIC of each pair to  list "new".
-"""
-def funcs_mic(lx,func_list):
-    new=[]
-    for func in func_list:
-        new.append(float(init_x(func,lx)))
-    return new
-
-"""
-    This function will generate a matrix,in which each
-    coloumn is a random number that denotes the x value
-    of the function,the final 5 columns are filled with
-    random numbers except the last one.The last column
-    is the sum of the f(x) values of the functions.
-"""
-def func_value(rand_func,file_name):
-    class_value=[]
-    f=open(file_name,'w')
-    for x in range(0,500):
-        new=[]
-        rand_fill=[rand_func(0,100)]*5
-        val_sum=0
-        for func in func_list:
-            rand_x=rand_func(0,100)
-            val_sum=val_sum+func(rand_x)
-            new.append(rand_x)
-        new=new+rand_fill
-        new.append(val_sum)
-        f.write(",".join([str(x) for x in new])+'\n')
-    f.close()
-
-"""
-    Generate the mixed test file
-"""
-def mix_value(file_name):
-    final=[]
-    val_sum=[0]*500
-    for func in func_list:
-        rand_fun=random.choice([random.randint,random.uniform])
-        new=[]
-        for x in range(0,500):
-            x_val=rand_fun(0,100)
-            print "Now sum",x,val_sum[x]
-            val_sum[x]=val_sum[x]+func(x_val)
-            new.append(x_val)
-        final.append(new)
-    for x in range(0,5):
-        new=[random.random()]*500
-        final.append(new)
-    final.append(val_sum)
-    f=open(file_name,"w")
-    for x in range(0,500):
-        line=[]
-        for val in final:
-            line.append(val[x])
-        line=",".join([str(v) for v in line])+"\n"
-        f.write(line)
+def pure_func(filename,rand,p=0):
+    f=open(filename,'w')
+    cn=0
+    for line in range(0,500):
+        lx=[rand(0,100) for x in range(0,12)]
+        y=0
+        if cn<int(500*p):
+            y=rand(0,100)
+            cn=cn+1
+        else:
+            for x in range(0,len(func_list)):
+                y=y+func_list[x](lx[x])
+        lx=[str(x) for x in lx ]
+        f.write(",".join(lx)+','+str(y)+'\n')
     f.close()
 
 
-"""
-    The main function will calculate the average and standard
-    devitation of mic for each function.Every column represents
-    the correspond mic values.
-"""
-def equility():
-    sum_mic_int=[]
-    sum_mic_float=[]
-    """
-        Simulate each function  N times
-    """
-    N=10
-    for x in range(0,N):
-        lx_int=[random.randint(0,100) for x in range(0,500)]
-        lx_float=[random.uniform(0,100) for x in range(0,500)]
-        sum_mic_int.append(funcs_mic(lx_int,func_list))
-        sum_mic_float.append(funcs_mic(lx_float,func_list))
-    mic_int=np.array(sum_mic_int)
-    print "INT\n",mic_int
-    mic_float=np.array(sum_mic_float)
-    int_mean=np.mean(mic_int,axis=0)
-    int_stdv=np.std(sum_mic_int,axis=0)
-    print "X_INT\n",int_mean,"\n",int_stdv
+def mix_func(filename,p=0):
+    f=open(filename,'w')
+    rand=[random.choice([random.randint,random.uniform]) for x in range(0,12)]
+    cn=0
+    for line in range(0,500):
+        lx=[rand[x](0,100) for x in range(0,12)]
+        y=0
+        if cn<int(500*p):
+            y=random.uniform(0,100)
+            cn=cn+1
+        else:
+            for x in range(0,len(func_list)):
+                y=y+func_list[x](lx[x])
+        lx=[str(x) for x in lx ]
+        f.write(",".join(lx)+','+str(y)+'\n')
+    f.close()
 
-    print "FLT\n",mic_float
-    float_mean=np.mean(mic_float,axis=0)
-    float_stdv=np.std(sum_mic_float,axis=0)
-    print "X_FLT\n",float_mean,"\n",float_stdv
+if __name__=="__main__":
+    rand_pair=[[random.randint,"Dis"],[random.uniform,"Con"]]
+    for rand in rand_pair:
+        p=0
+        for x in range(0,10):
+            p=float(x)/10
+            pure_func(rand[1]+'_'+str(p)+".csv",rand[0],p)
+    p=0
+    for x in range(0,10):
+        p=float(x)/10
+        mix_func("Mix_"+str(p)+".csv",p)
 
-"""
-    This main funtion is going to generate the simulated
-    files in random int or uniform data
-"""
-if __name__=='__main__':
-    choice=[[random.randint,"int"],[random.uniform,"float"]]
-    for rand in choice:
-        for i in range(0,5):
-            func_value(rand[0],rand[1]+"_"+str(i)+".csv")
-    for x in range(0,5):
-        mix_value("mix_"+str(x)+".csv")
 
