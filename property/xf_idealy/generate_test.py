@@ -24,7 +24,7 @@ def non_linear(x):
     return x*math.sin(x)
 def fourior_fun(x):
     return math.sin(16*math.pi*x)+x
-def norm_fun(x,mu=0,siga=1):
+def norm_fun(x,mu=50,siga=10):
     a=1/(siga*np.sqrt(2*np.pi)) 
     b=-(x-mu)**2/(2*siga**2)
     return a*np.exp(b)
@@ -36,14 +36,17 @@ func_nls=["Linear","Non-linear","Fourier","Sin","Cube","Normal"]
 func_pair=zip(func_list,func_nls)
 
 if __name__=="__main__":
-    rand=random.randint
+    rand=random.uniform
+    #add p percent noise 
+    ly=[rand(0,100) for x in range(0,500)]
     for p in range(0,10):
         f=open("test_"+str(p)+".csv",'w')
-        ly=[rand(0,100) for x in range(0,500)]
         n1=int(float(p)/10*500)
+        #generate the data per line
         for line in range(0,n1):
             lx=[]
-            lx=[rand(0,100) for x in range(0,13) ]
+            lx=[rand(0,100) for x in range(0,12) ]
+            lx.append(ly[line])
             lx=[str(x) for x in lx]
             f.write(",".join(lx)+"\n")
         for line in range(n1,500):
@@ -52,8 +55,8 @@ if __name__=="__main__":
                 lx.append(func_list[i](ly[line]))
             for x in range(0,6):
                 lx.append(rand(0,100))
-            lx=[str(x) for x in lx]
             lx.append(str(ly[line]))
+            lx=[str(x) for x in lx]
             f.write(",".join(lx)+"\n")
         f.close()
 

@@ -22,7 +22,7 @@ def non_linear(x):
     return x*math.sin(x)
 def fourior_fun(x):
     return math.sin(16*math.pi*x)+x
-def norm_fun(x,mu=0,siga=1):
+def norm_fun(x,mu=50,siga=10):
     a=1/(siga*np.sqrt(2*np.pi)) 
     b=-(x-mu)**2/(2*siga**2)
     return a*np.exp(b)

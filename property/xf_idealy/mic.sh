@@ -5,5 +5,5 @@
 flst=`ls *.csv| sort`
 for fl in $flst
 do
-    ./fast_mic.sh $fl 3 0.6 15
+    ./fast_mic.sh $fl 3 0.7 15
 done
