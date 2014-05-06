@@ -1,0 +1,95 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+CHECK_DATA	mic.h	19;"	d
+DataSet	mic.h	/^typedef struct DataSet$/;"	s
+Debug	mic.h	13;"	d
+Debug	mic.h	27;"	d
+Debug	mic.h	28;"	d
+EXACT	mic.h	21;"	d
+FileContent	read_content.h	/^typedef struct FileContent$/;"	s
+LEVEL_1	mic.h	14;"	d
+LEVEL_2	mic.h	15;"	d
+LEVEL_3	mic.h	16;"	d
+LOWEST	mic.h	18;"	d
+Label	mic.h	/^typedef struct Label$/;"	s
+MAX	mic.h	23;"	d
+MIC_H	mic.h	2;"	d
+MIC_MATRIX	mic_matrix.h	2;"	d
+MIC_SET	main.h	2;"	d
+MIN	mic.h	24;"	d
+MicMatrix	mic_matrix.h	/^typedef struct MicMatrix$/;"	s
+Optx	mic.c	/^void Optx(int x,int y, int clmn, int **rs, float **MI)$/;"	f
+PATA_H	para_chk.h	3;"	d
+PI	mic.h	17;"	d
+Point	mic.h	/^typedef struct Point$/;"	s
+Points	mic.h	/^}Points;$/;"	t	typeref:struct:DataSet
+READ_ALL_CONTENT	read_content.h	2;"	d
+atrn	mic_matrix.h	/^    int atrn;$/;"	m	struct:MicMatrix
+atrn	read_content.h	/^    int atrn;$/;"	m	struct:FileContent
+bufsize	mic.h	20;"	d
+cal_MI	mic.c	/^void cal_MI(Points *D,data_type * Dx,data_type * Dy,int x ,int y, int f,float **MI)$/;"	f
+cal_merit	mic_matrix.c	/^float cal_merit(int *lst,int l,mic_matrix M)$/;"	f
+cal_mic	mic.c	/^float cal_mic(Points *D,float alpha,int f)$/;"	f
+cal_mic_1all	mic.c	/^void cal_mic_1all(char *filename,int a,float alpha,int f)$/;"	f
+cal_mic_ctmem	read_content.c	/^void cal_mic_ctmem(int argc,char *argv[])$/;"	f
+cal_mic_inter	mic.c	/^float cal_mic_inter(char *filename,Points *D,int xa,int yb,float alpha,int f)$/;"	f
+cal_mic_matrix	mic_matrix.c	/^float ** cal_mic_matrix(char *fnm,float alpha,float f)$/;"	f
+cal_mic_section	mic_matrix.c	/^float **cal_mic_section(char * fnm,int start_col,int end_col,float alpha,float f)$/;"	f
+check_arry	mic_matrix.c	/^void check_arry(int * l,int a)$/;"	f
+check_mic_matrix	mic_matrix.c	/^void check_mic_matrix(mic_matrix M)$/;"	f
+chk_sm	mic.c	/^int chk_sm(Points * D)$/;"	f
+ck_e	para_chk.c	/^int ck_e(float e)$/;"	f
+ck_f	para_chk.c	/^int ck_f(char *filename)$/;"	f
+ck_i	para_chk.c	/^int ck_i(int xa,int yb,int atrn)$/;"	f
+ck_m	para_chk.c	/^int ck_m(char *mode)$/;"	f
+ck_mic	para_chk.c	/^int ck_mic(int argc,char *argv[], int atrn)$/;"	f
+ck_micfs	para_chk.c	/^int ck_micfs(int argc,char *argv[])$/;"	f
+ck_n	para_chk.c	/^int ck_n(int argc,int der)$/;"	f
+ckpa	mic.c	/^int ckpa(int argc,char *argv[],int atrn)$/;"	f
+class_idx	mic_matrix.h	/^    int class_idx;$/;"	m	struct:MicMatrix
+cn	mic.h	/^	int cn;$/;"	m	struct:Label
+count_atr	mic.c	/^int count_atr(char *filename)$/;"	f
+count_inst	mic.c	/^int count_inst(char * filename)$/;"	f
+ct	read_content.h	/^    float **ct;$/;"	m	struct:FileContent
+data_type	mic.h	/^}data_type;$/;"	t	typeref:struct:Point
+eqpX	mic.c	/^int eqpX (Points *D,data_type * Dx, data_type *Dy, int l, int x, int y, int f)$/;"	f
+eqpY	mic.c	/^void eqpY (Points *D, data_type * Dy ,int l, int y )$/;"	f
+fct	read_content.h	/^}fct;$/;"	t	typeref:struct:FileContent
+fill_mic_matrix	mic_matrix.c	/^void fill_mic_matrix(char *fnm,mic_matrix *M,float exp,float f)$/;"	f
+fn	read_content.h	/^    char *fn;$/;"	m	struct:FileContent
+fu	mic.c	/^void fu (int len ,data_type *SRC_DA,data_type *DES_DB )$/;"	f
+gd	mic.c	/^void gd (Points * D )$/;"	f
+gdrs	mic.c	/^void gdrs(Points *D ,int ** rs ) $/;"	f
+grid	mic.h	/^	label_type * grid;$/;"	m	struct:DataSet
+hst	mic.c	/^void hst(int clmn,int y,int **rs,float **Hpq,float **Hst,float **Ai,float *Hq)$/;"	f
+inst	read_content.h	/^    int inst;$/;"	m	struct:FileContent
+label_type	mic.h	/^}label_type;$/;"	t	typeref:struct:Label
+len	mic.h	/^	int len;$/;"	m	struct:DataSet
+main	main.c	/^int main(int argc,char *argv[])$/;"	f
+mic	mic_matrix.h	/^    float **mic;$/;"	m	struct:MicMatrix
+mic_ct_mem	read_content.c	/^float mic_ct_mem(fct file_content,Points *D,int a ,int b,float alpha,int f)$/;"	f
+mic_matrix	mic_matrix.h	/^}mic_matrix;$/;"	t	typeref:struct:MicMatrix
+opa	mic.c	/^float opa (int argc,char *argv[] )$/;"	f
+p_qs	mic.c	/^int p_qs (data_type *sd,int left,int right)$/;"	f
+para_chk	para_chk.c	/^int para_chk(int argc,char *argv[],int atrn)$/;"	f
+pos	mic.h	/^	int   pos;$/;"	m	struct:Point
+q_sort	mic.c	/^void q_sort ( data_type * sd, int l )$/;"	f
+qs	mic.c	/^void qs (data_type *sd ,int left , int right )$/;"	f
+read_content	read_content.c	/^float ** read_content(fct *file)$/;"	f
+read_pair	mic.c	/^int read_pair(char *filename,int xa,int yb,data_type *x,data_type *y)$/;"	f
+rn	mic.h	/^	int rn;$/;"	m	struct:Label
+rnd	mic.c	/^int rnd ( float x )$/;"	f
+rp	mic.c	/^void rp(FILE * src,int xa ,int yb, data_type *x ,data_type *y)$/;"	f
+smr	mic.c	/^int smr (Points *D,data_type *sdx,int a,int b)$/;"	f
+smx	mic.c	/^int smx (data_type *sdx,int a,int b)$/;"	f
+swap	mic.c	/^void swap (data_type * sd,int a,int b)$/;"	f
+usage	para_chk.c	/^void usage()$/;"	f
+val	mic.h	/^	double val;$/;"	m	struct:Point
+vd	mic.c	/^void vd (Points *D,data_type * sdx, int l)$/;"	f
+vyp	mic.c	/^void vyp ( int y , int * yp )$/;"	f
+x	mic.h	/^	data_type * x;$/;"	m	struct:DataSet
+y	mic.h	/^	data_type * y;$/;"	m	struct:DataSet

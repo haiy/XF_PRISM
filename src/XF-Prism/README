@@ -1,0 +1,42 @@
+=======================
+author:haiyangfu512@gmail.com
+date: 2014年 5月 6日 星期二 14时44分26秒 CST
+
+=======================
+Description:
+    这个文件夹下的文件主要是进行特征选择的全部流程，
+    最后输出的是运用特征选择得到的特征建立的模型进行
+    10-fold后得到的分类准确率。
+
+    当期版本仅供研究使用，还有很多地方待改进。
+
+Requirement:
+    1.支持make编译的c编译器
+    2.GUN bash 4.3 或者更新的bash
+    3. python 2.7 
+    4. 重新编译src/micfs/下的代码生成main,放到当前目录下
+    5. 重新编译src/fast_mic/下的代码生成mic_set,放到当前目录下
+    6. 确保测试数据文件后缀为csv并且文件内容格式无缺失值和test_data
+    中的corral.csv格式一致。
+
+Usage:
+    bash micfs_plot.sh 3 0.6 15 first-last 0.1
+    注：
+    参数说明，3 是fast_mic计算时候的分割份数
+              0.6 和15和mic计算时的参数
+              first-last 是传入weka的数据类型转换的范围
+              0.1是fcbf是delta参数
+
+=======================
+Note:
+GNU licence.
+
+当前目录下的jar包程序为：
+1.fcbf_1_0.jar计算fcbf的原始程序，是fcbf算法作者的
+url: http://www.public.asu.edu/~huanliu/FCBF/FCBFsoftware.html
+2.libsvm.jar是svm模型的计算程序，是Chih-Chung Chang and Chih-Jen Lin
+3.weka.jar url:http://www.cs.waikato.ac.nz/ml/weka/
+
+其他程序均为自己写的，仅供满足研究需要，如需要交流请e-mail.
+程序已经在linux的ubuntu12.04,mac os 10.9测试过。欢迎提交bug.
+
