@@ -122,14 +122,17 @@ float cal_mic(Points *D,float alpha,int f)
     fu(D->len,D->x,Dx);
     fu(D->len,D->y,Dy);
 
+    /*将数据排序*/
     q_sort(Dx,D->len);
     q_sort(Dy,D->len);
 #ifdef check_data 
     vd ( D,Dy,D->len );
 #endif
 
+    /*计算得到最大分割值*/
     int B=pow(D->len,alpha);
     int max_B=((float)B/2);
+
     int y=0;
     int x=0;
     float **I=(float **)malloc(sizeof(float *)*(max_B+1));
@@ -158,6 +161,7 @@ float cal_mic(Points *D,float alpha,int f)
 #ifdef DEBUG_1
         printf("%d\t%d\n",x,y);
 #endif
+        /*计算交互信息特征矩阵*/
         cal_MI(D,Dx,Dy,x,y,f,MI_xy);
         cal_MI(D,Dy,Dx,x,y,f,MI_yx);
     }
@@ -167,6 +171,8 @@ float cal_mic(Points *D,float alpha,int f)
     {
         MIC[i]=(float *)malloc(sizeof(float)*(max_B+1));
     }
+
+    /*合并两个特征矩阵，并标准化*/
     float maxMIC=LOWEST;
     for(y=2;y<=max_B;y++)
     {
@@ -292,6 +298,7 @@ void Optx(int x,int y, int clmn, int **rs, float **MI)
         printf("%d\t%d\t%d\n",x,y,clmn);
 #endif
 
+    /*预先计算所有网格的点分布熵值*/
     hst(clmn,y,rs,Hpq,Hst,Ai,Hq);
 
     float *F=(float *)malloc(sizeof(float)*(clmn+1));
@@ -406,6 +413,7 @@ void hst(int clmn,int y,int **rs,float **Hpq,float **Hst,float **Ai,float *Hq)
 #ifdef DEBUG_1
         printf("sum:%d\ny axis partition: [ ",sum);
 #endif
+    /*计算每个分割区间的点数*/
     for(j=0;j<y;j++)
     {
 
@@ -515,12 +523,11 @@ void gdrs(Points *D ,int ** rs )
 /* get super clumps  */
 int eqpX (Points *D,data_type * Dx, data_type *Dy, int l, int x, int y, int f)
 {
-
-    int i=0;
-    int clmn=f*x;
-    float scz=((float)l/clmn);
+    int i=0; 
+    int clmn=f*x;//小列的个数
+    float scz=((float)l/clmn);//期望的列大小
     int c=0;
-    int sci=0;
+    int sci=0;//当前列的点
 
 #ifdef DEBUG_1
         printf("Desired size:%f\n",scz);
@@ -534,14 +541,20 @@ int eqpX (Points *D,data_type * Dx, data_type *Dy, int l, int x, int y, int f)
         D->grid[Dx[i].pos].cn=c;
         int SMR=1;
         int SMX=1;
+
+        /*待添加点和其临近点的合并成簇逻辑*/
         for(t=1;i+t<l;t++)
         {
+            /*同行判断*/
             if(!smr(D,Dx,i,i+t))
             {
                 SMR=0;
             }
+
+            /*同值判断*/
             if(!smx(Dx,i,i+t))
             {
+                /*不同值，不同行*/
                 if(!SMR)
                 {
                     break;
@@ -553,11 +566,13 @@ int eqpX (Points *D,data_type * Dx, data_type *Dy, int l, int x, int y, int f)
                 break;
             }
         }
-        sc=t;
+
+        sc=t;//t个点合并成一小簇
 #ifdef eqpx
         printf("now t :%d,i+t:%d\n",t,i+t);
 #endif 
         /* whether to cut down the current clump */
+        /*从后往前剔除值相等的点*/
         if(!SMX&&Dx[i+t-1].val==Dx[i+t].val)
         {
             int j=0;
@@ -585,9 +600,11 @@ int eqpX (Points *D,data_type * Dx, data_type *Dy, int l, int x, int y, int f)
             idx+=1;
         }
         sci+=sc;
+        /*是否添加到当前列*/
         if((fabs(sci+sc-scz)>=fabs(sci-scz))&&(sci))
         {
             sci=0;
+            /*动态计算对于剩下的分割的大小*/
             if(clmn-c-1==0)
             {
                 scz=l;
@@ -624,6 +641,7 @@ int smx (data_type *sdx,int a,int b)
         return 0;
     }
 }
+
 /* eqpY : equipartition the y axis      */
 void eqpY (Points *D, data_type * Dy ,int l, int y )
 {
